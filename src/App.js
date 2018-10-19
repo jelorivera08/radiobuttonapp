@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import RadioStepper from './RadioStepper';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Grid container justify="center">
+        <Grid item xs={12} style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: '80px', fontFamily: 'Pacifico' }}>Menu</div>
+        </Grid>
+
+        <Grid item xs={12} style={{ textAlign: 'center' }}>
+          <Grid container justify="center">
+            <Grid item xs={6} style={{ textAlign: 'center' }}>
+              <Paper
+                style={{
+                  width: '100%',
+                  height: '560px',
+                }}
+              >
+                <RadioStepper />
+              </Paper>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     );
   }
 }
